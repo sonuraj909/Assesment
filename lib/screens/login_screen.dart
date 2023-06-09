@@ -82,6 +82,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     ],
                   ),
                   TextFormField(
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: kWhitecolour,
+                    ),
                     controller: emailText,
                     decoration: const InputDecoration(
                       enabledBorder: UnderlineInputBorder(
@@ -97,6 +101,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   TextFormField(
                     controller: passwordText,
+                    obscureText: true,
+                    obscuringCharacter: "⚪",
                     decoration: const InputDecoration(
                       enabledBorder: UnderlineInputBorder(
                         borderSide: BorderSide(color: ktransparentcolour1),
