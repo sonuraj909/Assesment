@@ -16,7 +16,6 @@ class _LoginScreenState extends State<LoginScreen> {
   final passwordText = TextEditingController();
   @override
   void dispose() {
-    // Clean up the controller when the widget is disposed.
     emailText.dispose();
     passwordText.dispose();
     super.dispose();
@@ -121,6 +120,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       onPressed: () async {
                         var response = await callapiservice();
                         if (response == 200) {
+                          // ignore: use_build_context_synchronously
                           Navigator.push(
                             context,
                             MaterialPageRoute(
